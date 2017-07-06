@@ -1,8 +1,8 @@
 ## Build and update hub image
 
 ```
-$ docker build -t twined/ando:2.1 .
-$ docker push twined/ando:2.1
+$ docker build -t twined/ando:2.2 .
+$ docker push twined/ando:2.2
 ```
 
 ## Alpine versions
@@ -15,7 +15,7 @@ $ docker push twined/ando:2.1
 ## Example Dockerfile
 
 ```
-FROM twined/ando:2.1
+FROM twined/ando:2.2
 
 MAINTAINER Twined Networks <mail@twined.net>
 
