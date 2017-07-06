@@ -1,8 +1,8 @@
 ## Build and update hub image
 
 ```
-$ docker build -t twined/ando:2.2 .
-$ docker push twined/ando:2.2
+$ docker build -t twined/ando:2.3 .
+$ docker push twined/ando:2.3
 ```
 
 ## Alpine versions
@@ -15,7 +15,7 @@ $ docker push twined/ando:2.2
 ## Example Dockerfile
 
 ```
-FROM twined/ando:2.2
+FROM twined/ando:2.3
 
 MAINTAINER Twined Networks <mail@twined.net>
 
@@ -33,7 +33,7 @@ COPY package.json yarn.lock /opt/app/assets
 RUN cd assets/ && yarn --pure-lockfile
 RUN cd assets/ && node_modules/.bin/brunch build -p
 
-RUN mix phoenix.digest
+RUN mix phx.digest
 RUN mix compile
 RUN mix release --verbosity=verbose
 ```
